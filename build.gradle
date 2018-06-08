@@ -1,0 +1,45 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.2.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.opsbin'
+version = '0.0.1'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// spring boot
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+	compile('org.springframework.boot:spring-boot-starter-web')
+
+    // other libs
+    // compile 'org.thymeleaf.extras:thymeleaf-extras-springsecurity4:2.1.2.RELEASE'
+
+	// frontend
+	compile 'org.webjars:webjars-locator:0.32'
+	compile 'org.webjars:webjars-locator-core:0.31'
+	compile 'org.webjars:jquery:2.1.4'
+	compile 'org.webjars:bootstrap:3.3.4'
+	compile 'org.webjars:bootswatch:3.3.4+1'
+	compile 'org.webjars:jquery-ui:1.11.4'
+	compile 'org.webjars:jquery-ui-themes:1.11.4'
+
+	// test lib
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
