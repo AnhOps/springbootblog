@@ -1,11 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Spring-Data Does MVC</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <!--simplex/sandstone-->
-        <link th:href="@{/webjars/bootswatch/3.3.4+1/sandstone/bootstrap.min.css}" rel="stylesheet"/>
-
+        <div th:include="fragments/head :: head" th:remove="tag">Global Header</div>
+        <title>Spring Boot Blog</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/github.css}"/>
     </head>
+
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-primary">
             <div class="container">
@@ -33,7 +35,6 @@
 
         </div>
 
-        <script th:src="@{/webjars/bootstrap/3.3.4/js/bootstrap.min.js}"></script>
-
+        <div th:include="fragments/scripts :: [id='scripts']" th:remove="tag">Scripts</div>
     </body>
 </html>

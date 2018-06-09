@@ -1,9 +1,4 @@
-div.github {
-    padding: 0;
-    margin: 0;
-    font: bold 11px/14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    overflow: hidden;
-}
+/*/<editor-fold> desc="Editor ----------------------------/ "*/
 
 .cke_source {
     color: #000;
@@ -12,3 +7,4 @@ div.github {
     white-space: inherit;
 }
 
+/*</editor-fold>*/
