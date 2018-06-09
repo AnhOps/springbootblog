@@ -9,21 +9,23 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-primary">
-            <div class="container">
-                <span class="navbar-header">
-                    <a class="navbar-brand" href="#">
-                        <span th:text="#{web.site.title}">Site Title</span></a>
-                </span>
+        <!--<nav class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-primary">-->
+            <!--<div class="container">-->
+                <!--<span class="navbar-header">-->
+                    <!--<a class="navbar-brand" href="#">-->
+                        <!--<span th:text="#{web.site.title}">Site Title</span></a>-->
+                <!--</span>-->
 
-            </div>
-        </nav>
+            <!--</div>-->
+        <!--</nav>-->
+
+        <nav th:replace="fragments/navbar :: navbar('home')">Navbar</nav>
 
         <div class="jumbotron">
             <div class="container">
-                <h1 class="jumbotronTitle">Jumbotron Title</h1>
+                <h1 class="jumbotronTitle">Stylish Portfolio</h1>
 
-                <p >Jumbotron Subtitle</p>
+                <p>A Free Bootstrap Theme by Start Bootstrap</p>
 
                 <p>
                     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
