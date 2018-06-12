@@ -102,7 +102,9 @@ body {
 }
 
 .sponsor img {
-    max-width: 175px;
+    min-height: 67px;
+    height:auto !important;
+    height:67px;
 }
 
 /*</editor-fold>*/
